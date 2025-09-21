@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🧠🕹️ IQ Arena 🎮🏆</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="light-mode">
+
+<div class="quiz-container">
+  <!-- Quit button top-right -->
+  <button class="quit-home hidden" id="quit-btn">Quit</button>
+
+  <!-- Back button top-left -->
+  <button class="back-home hidden" id="back-btn">⬅ Back</button>
+ <!-- Start Screen -->
+  <div id="settings">
+    <h1>🧠🕹️ IQ Arena 🎮🏆</h1>
+
+    <input type="text" id="player-name" placeholder="Enter your name"/>
+    <br/>
+    <label>Category:</label>
+    <select id="category">
+      <option value="any">All</option>
+    </select>
+    <br/>
+    <label>Difficulty:</label>
+    <select id="difficulty">
+      <option value="all">All</option>
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <br/>
+    <button id="start-btn">Start Quiz</button>
+    <button id="toggle-mode">🌙 Dark Mode</button>
+    <button id="toggle-sound">🔊 Sound On</button>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div id="quiz" class="hidden">
+    <div id="progress-container">
+      <div id="progress">0/0</div>
+      <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+      </div>
+    </div>
+    <div id="timer">⏳ Time left: <span id="time">15</span>s</div>
+    <div id="score-container">Score: <span id="score">0</span></div>
+    <div id="question"></div>
+    <div id="options"></div>
+    <div id="controls">
+      <button id="next-btn">Next</button>
+      
+    </div>
+  </div>
+
+ <!-- Leaderboard -->
+  <div id="leaderboard-container" class="hidden">
+    <h2>🏆 Leaderboard</h2>
+    <div id="leaderboard-list"></div>
+    <button id="restart-btn">Restart</button>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
